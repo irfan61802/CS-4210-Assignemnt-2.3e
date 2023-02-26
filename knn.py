@@ -3,7 +3,7 @@
 # FILENAME: knn.py
 # SPECIFICATION: program to find the LOO-CV error rate for 1NN
 # FOR: CS 4210- Assignment #2
-# TIME SPENT: how long it took you to complete the assignment
+# TIME SPENT: 20 min
 #-----------------------------------------------------------*/
 
 #IMPORTANT NOTE: DO NOT USE ANY ADVANCED PYTHON LIBRARY TO COMPLETE THIS CODE SUCH AS numpy OR pandas. You have to work here only with standard vectors and arrays
@@ -62,7 +62,10 @@ for row in db:
     #class_predicted = clf.predict([[1, 2]])[0]
     #--> add your Python code here
 
+
     prediction=clf.predict([testSample])[0]
+
+    print(prediction)
 
     #compare the prediction with the true label of the test instance to start calculating the error rate.
     #--> add your Python code here
@@ -73,7 +76,8 @@ for row in db:
 #print the error rate
 #--> add your Python code here
 
-print("Error Rate: "+str(rightPredictions/len(db)))
+print("Wrong Predictions: "+ str(10-rightPredictions)+"| Total Predictions: 10")
+print("Error Rate: "+str(round((10-rightPredictions)/10,2)))
 
 
 
