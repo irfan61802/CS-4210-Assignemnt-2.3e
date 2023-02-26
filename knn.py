@@ -65,7 +65,6 @@ for row in db:
 
     prediction=clf.predict([testSample])[0]
 
-    print(prediction)
 
     #compare the prediction with the true label of the test instance to start calculating the error rate.
     #--> add your Python code here
